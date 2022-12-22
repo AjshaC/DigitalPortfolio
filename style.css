@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.HeroContainer {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.video video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.TextContent {
+  background-color: #181818;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 10px;
+  text-align: center;
+  font-size: 15px;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 5s;
+}
+
+.TextContent.fade {
+  opacity: 0;
+}
+
+.TextContent button {
+  margin: 20px;
+  width: 20%;
+  height: 4%;
+
+  cursor: pointer;
+  color: #f9b786;
+  font-size: 15px;
+  letter-spacing: 15px;
+  position: relative;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  animation-duration: 6s;
+  animation-name: opacitychange;
+  animation-iteration-count: 1;
+}
+
+.TextContent button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f9b786;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.TextContent button:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.TextContent h1 {
+  font-family: "Aboreto";
+  font-size: 50px;
+  font-weight: lighter;
+  padding-bottom: 20px;
+  animation-duration: 6s;
+  animation-name: opacitychange;
+  animation-iteration-count: 1;
+}
+
+.TextContent p {
+  font-family: monospace;
+  animation-duration: 6s;
+  animation-name: opacitychange;
+  animation-iteration-count: 1;
+}
+.buttons {
+  z-index: 2;
+  position: absolute;
+  top: 5px;
+  padding-top: 10px;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 5s;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.buttons button {
+  /* margin-right: 10px; */
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  color: #f9b786;
+  font-size: 20px;
+  font-family: "Aboreto";
+
+  letter-spacing: 5px;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  color: whitesmoke;
+}
+
+@media only screen and (max-width: 600px) {
+  .TextContent h1 {
+    font-size: 25px;
+    font-weight: 700;
+    padding-left: 12px;
+  }
+
+  .TextContent p {
+    font-size: 12px;
+    letter-spacing: 3px;
+    padding-left: 5px;
+  }
+
+  .TextContent .fadeOut {
+    width: 80%;
+    padding-left: 15px;
+  }
+}
+
+.Holder {
+  display: flex;
+  flex-direction: column;
+}
+
+/*******************************AboutContent****************************************/
+.AboutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.MyImg {
+  width: 15%;
+  height: 15%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px rgba(249, 183, 134, 0.4);
+  animation-duration: 3s;
+  animation-name: opacitychange;
+}
+
+/* #my-div {
+  transition: transform 0.5s ease-in;
+} */
+
+.CvBtn {
+  height: 35px;
+  width: 250px;
+  background: linear-gradient(180deg, #f9b786 -34.51%, #fe6c00 100%);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #181818;
+  border-radius: 50px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  letter-spacing: 5px;
+  text-align: center;
+  font-family: "Aboreto";
+  font-weight: 700;
+}
+
+.CvBtn {
+  animation-duration: 3s;
+  animation-name: opacitychange;
+  animation-duration: 2s;
+  animation-name: transformtop;
+  animation-iteration-count: 1;
+}
+
+.AboutContainer h1,
+.ContactContainer h1 {
+  color: #f9b786;
+  font-family: "Aboreto";
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.AboutContainer p,
+.ContactContainer p {
+  width: 50%;
+  color: rgba(255, 255, 255, 0.774);
+  text-align: center;
+  font-family: Arial;
+  line-height: 1.5;
+}
+
+.AboutContainer p {
+  animation-duration: 2s;
+  animation-name: transformtop;
+  animation-iteration-count: 1;
+}
+.ContactContainer p {
+  animation-duration: 2s;
+  animation-name: transformbottom;
+  animation-iteration-count: 1;
+}
+
+.AboutContainer h1 {
+  animation-duration: 2s;
+  animation-name: transformtop;
+  animation-iteration-count: 1;
+}
+.ContactContainer h1 {
+  animation-duration: 2s;
+  animation-name: transformbottom;
+  animation-iteration-count: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .MyImg {
+    width: 50%;
+    height: 50%;
+  }
+
+  .AboutContainer p,
+  .ContactContainer p {
+    width: 90%;
+  }
+}
+
+/*******************************EndAboutContent****************************************/
+
+/*******************************ContactMeContent****************************************/
+
+.ContactContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  gap: 30px;
+}
+
+/* #Call-div {
+  transition: transform 0.5s ease-out;
+} */
+
+.LinkDiv {
+  display: flex;
+  gap: 20px;
+}
+.LinkDiv a {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(180deg, #f9b786 -34.51%, #fe6c00 100%);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 30px;
+  color: #181818;
+  animation-duration: 6s;
+  animation-name: opacitychange;
+  animation-iteration-count: 1;
+}
+
+.backA {
+  text-decoration: none;
+  color: #f9b786;
+  font-family: "Aboreto";
+  text-transform: uppercase;
+  animation-duration: 6s;
+  animation-name: opacitychange;
+  animation-iteration-count: 1;
+}
+
+.backA:hover {
+  transform: scale(1.2);
+}
+
+@keyframes transformtop {
+  from {
+    margin-top: 200px;
+  }
+  to {
+    margin-right: 0px;
+  }
+}
+@keyframes transformbottom {
+  from {
+    margin-bottom: 200px;
+  }
+  to {
+    margin-right: 0px;
+  }
+}
+
+@keyframes opacitychange {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
