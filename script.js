@@ -30,7 +30,7 @@ aboutP.innerHTML =
   " I am a person who works with joy to create immersive experiences. That's what I'm passionate about. My focused areas are web development, UX design, and 3D modeling. In addition to this, I am a very driven person who works hard for what I believe in.";
 
 let CvA = document.createElement("a");
-CvA.href = "Cv (1).pdf";
+CvA.href = "resume.pdf";
 CvA.target = "_blank";
 CvA.innerHTML = "RESUME";
 CvA.className = "CvBtn";
