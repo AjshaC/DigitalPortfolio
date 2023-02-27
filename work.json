@@ -117,21 +117,28 @@
     "image": "works-Img/dev/gTD.png",
     "title": "Get Things Done",
     "Id": 3,
-    "description": "ToDo Website, that is used to organize and prioritize tasks.",
+    "description": "ToDo Website, that is used to organize and prioritize tasks. Created with JavaScript",
     "link": "https://ajshac.github.io/Todo/"
   },
   {
     "image": "works-Img/dev/dagbok.png",
     "title": "DIGITAL DIARY",
     "Id": 3,
-    "description": "Digital Diary Website.",
+    "description": "Digital Diary Website. Created with JavaScript",
     "link": "https://ajshac.github.io/DigitalDiary/"
   },
   {
     "image": "works-Img/dev/calm.png",
     "title": "Hush and Calm",
     "Id": 3,
-    "description": "Website for Hush and Calm which is a place for meditation and mindfulness.",
+    "description": "Website for Hush and Calm which is a place for meditation and mindfulness. Created with Javascript",
     "link": "https://ajshac.github.io/hushandcalm.github.io/"
+  },
+  {
+    "image": "works-Img/dev/TWT.png",
+    "title": "Timer With Todos",
+    "Id": 3,
+    "description": "This website is todo application with a timer function. Created with TypeScript",
+    "link": "https://ajshac.github.io/TimerWithTsc/"
   }
 ]
